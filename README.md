@@ -1,4 +1,4 @@
 Sublime Text snippets
 ---------------------
 
-A place to store useful snippets for Sublime Text.
+A collection of snippets for Sublime Text.

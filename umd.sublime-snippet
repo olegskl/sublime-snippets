@@ -1,0 +1,28 @@
+<!-- UMD (Universal Module Definition) for CommonJS, AMD, and browser globals
+    Loosely based on UMD returnExports.js
+    https://github.com/umdjs/umd/blob/master/returnExports.js -->
+<snippet>
+    <content><![CDATA[
+// Universal Module Definition for CommonJS, AMD, and browser globals:
+(function (root, factory) {
+    'use strict';
+    if (typeof require === 'function' && module && typeof module === 'object' &&
+            module.exports && typeof module.exports === 'object') {
+        module.exports = factory(); // CommonJS
+    } else if (typeof define === 'function' && define.amd) {
+        define(factory); // AMD
+    } else {
+        root.${1:moduleName} = factory(); // browser global
+    }
+}(this, function () {
+    'use strict';
+    return ${2:{\}};
+}));
+]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>umd</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.js</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>UMD (CommonJS, AMD, Browser globals)</description>
+</snippet>
